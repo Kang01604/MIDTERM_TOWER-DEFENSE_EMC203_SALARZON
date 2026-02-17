@@ -253,6 +253,8 @@ public class GameManager : MonoBehaviour
     }
 
     // Coroutine to handle the one-by-one incrementing
+    // Originally was not in the script (coins originally go up without the animation)
+    // Added for this "coin UI will go up slowly via lerp when the coin reaches the UI element (e.g. 10 coins = 0.. 1.. 2.. 3.. 4 ... 10 coins)"
     IEnumerator UpdateCoinTextIncremental()
     {
         while (displayedCoins < coins)
